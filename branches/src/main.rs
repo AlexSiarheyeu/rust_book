@@ -6,9 +6,11 @@ fn main() {
     } else {
         println!("condition was false");
     }
+
+    println!("{:?}", convert_temperature(36.6));
 }
 
-fn main_condition_2() {
+fn main_condition_1() {
     let number = 6;
 
     if number % 4 == 0 {
@@ -41,4 +43,10 @@ fn main_loop() {
     };
 
     println!("The result is {result}");
+}
+
+fn convert_temperature(celsius: f32) -> (f32, f32) {
+    let kelvin = celsius + 273.15;
+    let fahrenheit = celsius * 1.8 + 32.0;
+    return (kelvin, fahrenheit);
 }
